@@ -7,8 +7,6 @@ const serverUrl = 'http://localhost:1225';
 async function main() {
   const merkleTree = new MerkleTree(niceList);
 
-  const root = merkleTree.getRoot();
-
   const name = 'Norman Block';
   const index = niceList.findIndex(n => n === name);
   const proof = merkleTree.getProof(index);
